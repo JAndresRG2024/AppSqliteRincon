@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PruebaAppMovil01Rincon.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+          
+            Padding="30,0"
+            Spacing="25">
+
+            <Label Text="Bienvenido a la aplicación de productos - Andrés Rincon"
+                   FontSize="24"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Productos" FontAttributes="Bold" />
+            <ListView x:Name="lvProductos" HeightRequest="200" SelectionMode="Single" ItemSelected="LvProductos_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding pro_nombre}" Detail="{Binding pro_marca}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="Id"></Label>
+            <Entry x:Name="txtId" Placeholder="Ingrese el Id del producto para seleccionarlo" IsReadOnly="True" />
+
+            <Label Text="Nombre"></Label>
+            <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre del producto (obligatorio)" />
+
+            <Label Text="Marca"></Label>
+            <Entry x:Name="txtMarca" Placeholder="Ingrese la marca del producto" />
+
+            <Label Text="Precio"></Label>
+            <Entry x:Name="txtPrecio" Placeholder="Ingrese el precio (numérico)" Keyboard="Numeric" />
+
+            <Button x:Name="cmdCrear" Text="Crear" Clicked="cmdCrear_Clicked"></Button>
+            <Button x:Name="cmdActualizar" Text="Actualizar" Clicked="cmdActualizar_Clicked"></Button>
+            <Button x:Name="cmdBorrar" Text="Borrar" Clicked="cmdBorrar_Clicked"></Button>
+
+            <Label Text="Movimientos" FontAttributes="Bold" />
+            <ListView x:Name="lvMovimientos" HeightRequest="150" SelectionMode="Single" ItemSelected="LvMovimientos_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding mov_tipo}" Detail="{Binding mov_cantidad}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="Tipo"></Label>
+            <Picker x:Name="pickerMovTipo">
+                <Picker.Items>
+                    <x:String>entrada</x:String>
+                    <x:String>salida</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Cantidad"></Label>
+            <Entry x:Name="txtMovCantidad" Placeholder="Ingrese la cantidad" />
+
+            <Label Text="Nota"></Label>
+            <Entry x:Name="txtMovNota" Placeholder="Ingrese una nota" />
+
+            <HorizontalStackLayout Spacing="10">
+                <Button x:Name="cmdCrearMov" Text="Crear movimiento" Clicked="CmdCrearMov_Clicked"></Button>
+                <Button x:Name="cmdActualizarMov" Text="Actualizar movimiento" Clicked="CmdActualizarMov_Clicked"></Button>
+                <Button x:Name="cmdBorrarMov" Text="Eliminar movimiento" Clicked="CmdBorrarMov_Clicked"></Button>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
