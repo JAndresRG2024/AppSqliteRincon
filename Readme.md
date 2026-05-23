@@ -24,21 +24,19 @@ El proyecto implementa operaciones CRUD (**Create, Read, Update y Delete**) medi
 
 #### Visualización de Productos
 
-```md
 ![Ver Producto](./images/VerProducto.png)
-```
 
 #### Actualización de Productos
 
-```md
+
 ![Actualizar Producto](./images/ActualizarProducto.png)
-```
+
 
 #### Eliminación de Productos
 
-```md
+
 ![Eliminar Producto](./images/EliminarProducto.png)
-```
+
 
 ---
 
@@ -53,21 +51,21 @@ El proyecto implementa operaciones CRUD (**Create, Read, Update y Delete**) medi
 
 #### Visualización de Movimientos
 
-```md
+
 ![Ver Movimiento](./images/VerMovimiento.png)
-```
+
 
 #### Actualización de Movimientos
 
-```md
+
 ![Actualizar Movimiento](./images/ActualizarMovimiento.png)
-```
+
 
 #### Eliminación de Movimientos
 
-```md
+
 ![Eliminar Movimiento](./images/EliminarMovimiento.png)
-```
+
 
 ---
 
